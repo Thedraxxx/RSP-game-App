@@ -45,7 +45,6 @@ class _GamePageState extends State<GamePage> {
       }
     });
   }
-
   void click2() {
     setState(() {
       var randomnum = random.nextInt(9);
