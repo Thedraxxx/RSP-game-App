@@ -198,7 +198,7 @@ class _GamePageState extends State<GamePage> {
                   children: [
                     Text(
                       "You Pick: $humanpick",
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.white),
+                      style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold,color: Colors.white),
                     ),
                     SizedBox(height: 20),
                     humanPickPhoto.isNotEmpty
@@ -213,7 +213,7 @@ class _GamePageState extends State<GamePage> {
                   children: [
                     Text(
                       "Computer Pick: $compick",
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.white),
+                      style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold,color: Colors.white),
                     ),
                     SizedBox(height: 20),
                     compPickPhoto.isNotEmpty
