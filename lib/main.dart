@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:rspgame/about.dart';
 import 'package:rspgame/game.dart';
+import 'package:rspgame/sign_up.dart';
+import 'package:flutter/services.dart';
+
 
 void main() {
   runApp(const RSPgame());
@@ -32,12 +36,12 @@ class _HomePageState extends State<HomePage> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // Background Image Container
+        
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/Images/background.jpg',),
-                opacity: 500,
+                opacity: 100,
                 fit: BoxFit.cover, // Cover the entire screen
               ),
             ),
@@ -66,7 +70,9 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   width: 200,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> AboutPage()));
+                    },
                     child: Text("About"),
                     style: ButtonStyle(
                       backgroundColor: WidgetStateProperty.all<Color>(
@@ -80,8 +86,10 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   width: 200,
                   child: ElevatedButton(
-                    onPressed: () {},
-                    child: Text("Log In"),
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUp()));
+                    },
+                    child: Text("Sign Up / Log In"),
                     style: ButtonStyle(
                       backgroundColor: WidgetStateProperty.all<Color>(
                           Colors.amberAccent.shade700),
@@ -94,7 +102,9 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   width: 200,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      SystemNavigator.pop();
+                    },
                     child: Text("Exit"),
                     style: ButtonStyle(
                       backgroundColor: WidgetStateProperty.all<Color>(
